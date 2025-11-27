@@ -1,0 +1,42 @@
+@import "variables";
+@import "reset";
+@import "mixins";
+header {
+  background-color: $header-background;
+  padding: 20px 165px;
+  display: flex;
+  justify-content: right;
+
+  ul {
+    display: flex;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      gap: 20px;
+      background-color: aqua;
+    }
+
+    li {
+      a {
+        color: $text-color;
+        font-weight: 700;
+        font-size: 22px;
+        &:hover {
+          color: $text-color-hover;
+        }
+        @media (max-width: 768px) {
+          color: green;
+        }
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    background-color: red;
+    padding: 20px 50px;
+  }
+}
+h2 {
+  @media (max-width: 992px) {
+    @include correct-color(black);
+  }
+}

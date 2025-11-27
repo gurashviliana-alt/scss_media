@@ -1,0 +1,9 @@
+@mixin correct-color($bgcolor) {
+  background-color: $bgcolor;
+
+  @if ($bgcolor == black) {
+    color: red;
+  } @else {
+    color: black;
+  }
+}
